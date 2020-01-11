@@ -6,13 +6,9 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 01:36:57 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/21 17:43:04 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2020/01/01 19:17:57 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** Indica si un carácter es alfabético (A-Z) (a-z)
-*/
 
 int	ft_isalpha(int c)
 {
@@ -20,5 +16,5 @@ int	ft_isalpha(int c)
 	{
 		return (1);
 	}
-	return(0);
+	return (0);
 }

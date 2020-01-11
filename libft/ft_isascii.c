@@ -6,13 +6,9 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 01:37:04 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/28 16:50:23 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2019/12/30 13:05:46 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** Comprueba sin un carácter pertenece al ASCII de 7 bits.
-*/
 
 int	ft_isascii(int c)
 {

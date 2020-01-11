@@ -6,7 +6,7 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 13:20:38 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/27 14:29:01 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2020/01/01 19:22:39 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ void		*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-

@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 01:39:08 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/17 20:07:16 by bgomez-r         ###   ########.fr       */
+/*   Created: 2020/01/04 16:51:59 by bgomez-r          #+#    #+#             */
+/*   Updated: 2020/01/04 16:53:07 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+int		ft_atoi(const char *str)
 {
-	size_t i;
-	char *dst;
+	int		sign;
+	int		result;
 
-	i = start;
-	if (!s)
+	result = 0;
+	sign = 1;
+	while (*str == ' ' || *str == '\n' || *str == '\v' || *str == '\t' ||
+			*str == '\r' || *str == '\f')
+		str++;
+	if (*str == '-')
 	{
-		return (0);
+		sign = -1;
+		str++;
 	}
-	while (i < len)
+	else if (*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
 	{
-		dst[i] = s[i];
-		i++;
+		result = result * 10;
+		result = result + (*str - '0');
+		++str;
 	}
-	return (dst);
+	return (result * sign);
 }

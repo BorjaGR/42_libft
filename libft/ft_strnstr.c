@@ -6,7 +6,7 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 17:21:09 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/19 21:31:48 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2020/01/01 19:36:13 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,17 @@
 
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	*look;
-	char	*search;
-	size_t	i;
-	size_t	j;
+	size_t	len_needle;
 
-	look = (char *)needle;
-	search = (char *)haystack;
-	i = 0;
-	j = 0;
-
-
-	if (!look && !search)
-		return (&(search[0]));
-	while ((i < len && search[i] != '\0'))
+	len_needle = ft_strlen(needle);
+	if (*needle == '\0')
+		return ((char *)haystack);
+	while (*haystack != '\0' && len_needle <= len)
 	{
-		if (search[i] == look[j])
-			j++;
-		else
-			j = 0;
-		i++;
-		if (look[j] == '\0')
-			return (&(search[i - j]));
+		if (ft_memcmp(haystack, needle, len_needle) == 0)
+			return (char *)haystack;
+		haystack++;
+		len--;
 	}
 	return (NULL);
 }

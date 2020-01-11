@@ -6,7 +6,7 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 01:38:21 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/21 19:59:38 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2019/12/30 13:06:50 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,3 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (str1[i] - str2[i]);
 }
-
-/*
-** int			ft_strncmp(const char *s1, const char *s2, size_t n)
-** {
-** 	size_t i;
-**
-** 	i = 0;
-** 	if (!n)
-** 		return (0);
-** 	while ((s1[i] == s2[i] && i < n - 1) && s1[i] != '\0' && s2[i] != '\0')
-** 	{
-** 		i++;
-** 	}
-** 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-** }
-*/

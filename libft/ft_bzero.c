@@ -6,27 +6,11 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 18:55:47 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/17 18:38:53 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2019/12/30 13:05:24 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** void	ft_bzero(void *s, size_t n)
-** {
-** 	size_t	i;
-** 	char	*s1;
-**
-** 	s1 = s;
-** 	i = 0;
-** 	while (i < n)
-** 	{
-** 		s1[i] = '\0';
-** 		i++;
-** 	}
-** }
-*/
 
 void	ft_bzero(void *s, size_t n)
 {

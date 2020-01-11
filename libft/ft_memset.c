@@ -6,14 +6,9 @@
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 18:12:11 by bgomez-r          #+#    #+#             */
-/*   Updated: 2019/11/17 18:45:35 by bgomez-r         ###   ########.fr       */
+/*   Updated: 2019/12/30 13:06:28 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** Escribe "len" veces el valor de "c" al string de *b
-** Return: el string de *b con los cambios.
-*/
 
 #include "libft.h"
 

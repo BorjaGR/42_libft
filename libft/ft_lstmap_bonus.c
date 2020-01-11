@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgomez-r <bgomez-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/17 16:58:29 by bgomez-r          #+#    #+#             */
-/*   Updated: 2020/01/01 20:31:33 by bgomez-r         ###   ########.fr       */
+/*   Created: 2019/12/28 13:39:26 by bgomez-r          #+#    #+#             */
+/*   Updated: 2020/01/01 19:21:58 by bgomez-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_putchar(char c)
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	write(1, &c, 1);
-}
+	t_list	*map;
+	t_list	*list;
 
-void		ft_putnbr(int n)
-{
-	long int	num;
-
-	num = n;
-	if (num < 0)
+	list = (t_list *)malloc(sizeof(t_list));
+	if (!list)
+		return (NULL);
+	if (!(lst && f))
+		return (NULL);
+	list = ft_lstnew(f(lst->content));
+	lst = lst->next;
+	while (lst)
 	{
-		ft_putchar('-');
-		num *= -1;
+		if (!(map = ft_lstnew(f(lst->content))))
+		{
+			ft_lstdelone(list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&list, map);
+		lst = lst->next;
 	}
-	if (num > 9)
-	{
-		ft_putnbr(num / 10);
-		ft_putnbr(num % 10);
-	}
-	else
-		ft_putchar(num + '0');
+	return (list);
 }
